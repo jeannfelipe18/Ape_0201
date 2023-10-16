@@ -2,29 +2,23 @@
 
 main(){
 
-    char alunos[3][20];
-    float notas[3][3], soma, media;
+    char alunos[5][20];
+    float notas[5][3], soma, media;
 
-    for(int i = 0; i < 3; i++){
-        printf("Digite o nome do aluno: ");
+    //nome ddos alunos
+    for(int i = 0; i < 5; i++){
+        printf("Digite o nome do aluno ");
         fgets(alunos[i] , 20, stdin);
     }
-
-    for(int i = 0; i < 3; i++){
+    for(int i = 0; i < 5; i++){
+        soma= 0;
         for(int j = 0; j < 3; j++){
             printf("Digite a nota do aluno: ");
             scanf("%f", &notas[i][j]);
-        }
-        printf("\n");
-    }
-
-    for(int i = 0; i < 3; i++){
-        soma = 0;
-        for(int j = 0; j < 3; j++){
             soma += notas[i][j];
         }
+        printf("\n");
         media = soma/3;
-        printf("Nome: %s",alunos[i]);
-        printf("Media: %.2f", media);
+        printf("\n Nome do aluno: %s e nota do aluno: %f", alunos[i], media);
     }
 }
